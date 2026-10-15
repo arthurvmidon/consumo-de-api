@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
+import MyName from './components/MyName';
 
 function App() {
   const API_KEY = '7d753a18';
