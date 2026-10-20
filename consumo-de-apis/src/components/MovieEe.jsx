@@ -3,16 +3,14 @@ import { useEffect, useState } from 'react'
 export default function MovieEe() {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [query, setQuery] = useState('spider man');
-    const API_KEY = 'XXXXXXXXX'; // coloque sua chave da OMDb aqui
+    const [query, setQuery] = useState('Avengers');
+    const API_KEY = '59ab1eb9';
 
     useEffect(() => {
         const getData = async () => {
             setLoading(true);
             try {
-                const response = await fetch(
-                    `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${API_KEY}`
-                );
+                const response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`);
                 const data = await response.json();
 
                 if (data.Response === 'True') {
