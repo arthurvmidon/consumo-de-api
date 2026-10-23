@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch";
 function Perfil() {
     const [count, setCount] = useState(0);
     const perfil = useFetch("https://6a79e554674f43f4db11ebc8.mockapi.io/api/person/8");
-    const dbz = useFetch("https://dragonball-api.com/api/characters/10");
+    const dbz = useFetch("https://dragonball-api.com/api/characters/33");
 
     if (perfil.loading || dbz.loading) return <div>Carregando...</div>;    
     if (perfil.error || dbz.error) return <div>Ocorreu um erro inesperado</div>;
