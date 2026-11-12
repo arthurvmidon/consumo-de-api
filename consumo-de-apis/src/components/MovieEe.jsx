@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 export default function MovieEe() {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [query, setQuery] = useState('Interstellar');
+    const [query, setQuery] = useState('Minecraft');
     const API_KEY = '59ab1eb9';
 
     useEffect(() => {
